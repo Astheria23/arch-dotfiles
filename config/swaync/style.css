@@ -53,3 +53,32 @@
   border-radius: 12px;
   color: #cdd6f4;
 }
+
+.widget-buttons-grid {
+  background: rgba(49, 50, 68, 0.8);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+  background: rgba(69, 71, 90, 0.9);
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #cdd6f4;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+  background: rgba(137, 180, 250, 0.3);
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:active {
+  background: rgba(137, 180, 250, 0.5);
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button.toggle.active {
+  background: #f38ba8;
+  color: #1e1e2e;
+}

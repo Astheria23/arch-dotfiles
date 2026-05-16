@@ -23,6 +23,7 @@ fi
 # ==========================
 # Terminal Essentials & Aliases
 # ==========================
+export PATH="$HOME/.local/zed.app/bin:$PATH"
 export EDITOR=nvim
 alias ls='eza --icons=always --color=always'
 alias ll='eza -alF --icons=always --color=always'
