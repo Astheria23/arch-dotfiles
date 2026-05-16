@@ -15,22 +15,55 @@
   "hide-on-action": true,
   "widgets": [
     "title",
-    "dnd",
+    "buttons-grid#toggles",
+    "label#battery",
+    "label#network",
     "mpris",
     "volume",
     "buttons-grid#audio",
     "backlight",
     "notifications"
   ],
-
   "widget-config": {
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
       "button-text": "Clear All"
     },
-    "dnd": {
-      "text": "Do Not Disturb"
+    "buttons-grid#toggles": {
+      "buttons-per-row": 4,
+      "actions": [
+        {
+          "label": "󰂚",
+          "command": "swaync-client -d",
+          "type": "toggle",
+          "update-command": "swaync-client -D | grep -q 'true' && echo true || echo false"
+        },
+        {
+          "label": "󰂯",
+          "command": "~/.config/waybar/scripts/bluetooth_toggle.sh",
+          "type": "toggle",
+          "update-command": "bluetoothctl show 2>/dev/null | grep -q 'Powered: yes' && echo true || echo false"
+        },
+        {
+          "label": "󰤨",
+          "command": "~/.config/waybar/scripts/wifi_toggle.sh",
+          "type": "toggle",
+          "update-command": "nmcli radio wifi 2>/dev/null | grep -q 'enabled' && echo true || echo false"
+        },
+        {
+          "label": "󰝟",
+          "command": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+          "type": "toggle",
+          "update-command": "wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo true || echo false"
+        }
+      ]
+    },
+    "label#battery": {
+      "text": "󰁺  100%"
+    },
+    "label#network": {
+      "text": "󰤨  OGEZ FAMILY"
     },
     "mpris": {
       "image-size": 96,
@@ -44,25 +77,18 @@
       "expand-per-app": true
     },
     "buttons-grid#audio": {
-      "buttons-per-row": 2,
+      "buttons-per-row": 1,
       "actions": [
         {
-          "label": " Output",
+          "label": "󰋋  Switch Output",
           "command": "~/.config/waybar/scripts/audio_switcher.sh"
-        },
-        {
-          "label": "󰖁 Mute",
-          "command": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-          "type": "toggle",
-          "update-command": "wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q MUTED && echo true || echo false"
         }
       ]
     },
     "backlight": {
-      "label": "󰃠",
+      "label": "󰖙",
       "device": "amdgpu_bl1"
     },
     "notifications": {}
   }
-  
 }

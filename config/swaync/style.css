@@ -1,10 +1,12 @@
+@import url('/etc/xdg/swaync/style.css');
+
 * {
-  font-family: "JetBrainsMono Nerd Font", "Ubuntu Nerd Font", sans-serif;
+  font-family: "JetBrainsMono Nerd Font", "JetBrainsMonoNL Nerd Font", "JetBrainsMono NFM", "Ubuntu Nerd Font", "Noto Sans Mono", sans-serif;
   font-weight: bold;
 }
 
 .control-center .background {
-  background: rgba(30, 30, 46, 0.7); /* Transparan gelap */
+  background: rgba(30, 30, 46, 0.7);
   border-radius: 12px;
 }
 
@@ -25,16 +27,60 @@
   font-size: 1.2rem;
 }
 
-.widget-dnd {
-  margin: 10px;
+.widget-title button {
+  background: rgba(69, 71, 90, 0.9);
+  border-radius: 8px;
+  color: #cdd6f4;
+  padding: 6px 12px;
 }
 
-.widget-dnd > switch {
-  background: #45475a;
+.widget-title button:hover {
+  background: rgba(137, 180, 250, 0.3);
 }
 
-.widget-dnd > switch:checked {
-  background: #89b4fa;
+/* Toggle Buttons Row (DND, BT, WiFi, Mute) */
+.widget-buttons-grid#toggles {
+  background: transparent;
+  padding: 0 10px;
+  margin: 5px 10px;
+}
+
+.widget-buttons-grid#toggles > flowbox > flowboxchild > button {
+  font-family: "JetBrainsMono Nerd Font", "JetBrainsMonoNL Nerd Font", "JetBrainsMono NFM", "Ubuntu Nerd Font", "Noto Sans Mono", sans-serif;
+  font-weight: normal;
+  background: rgba(69, 71, 90, 0.6);
+  border-radius: 10px;
+  padding: 10px 0;
+  color: #6c7086;
+  font-size: 22px;
+  min-width: 60px;
+  min-height: 40px;
+  transition: all 0.2s ease;
+  -gtk-icon-source: none;
+}
+
+.widget-buttons-grid#toggles > flowbox > flowboxchild > button:hover {
+  background: rgba(137, 180, 250, 0.2);
+  color: #cdd6f4;
+}
+
+.widget-buttons-grid#toggles > flowbox > flowboxchild > button.toggle.active {
+  background: rgba(137, 180, 250, 0.4);
+  color: #89b4fa;
+}
+
+/* Battery & Network Labels */
+.widget-label {
+  background: rgba(49, 50, 68, 0.8);
+  padding: 8px 14px;
+  margin: 5px 10px;
+  border-radius: 10px;
+}
+
+.widget-label > label {
+  color: #a6adc8;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .widget-volume,
@@ -54,31 +100,23 @@
   color: #cdd6f4;
 }
 
-.widget-buttons-grid {
-  background: rgba(49, 50, 68, 0.8);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 12px;
+/* Audio Output Button */
+.widget-buttons-grid#audio {
+  background: transparent;
+  padding: 0 10px;
+  margin: 5px 10px;
 }
 
-.widget-buttons-grid > flowbox > flowboxchild > button {
-  background: rgba(69, 71, 90, 0.9);
-  border-radius: 8px;
-  padding: 8px 12px;
-  color: #cdd6f4;
+.widget-buttons-grid#audio > flowbox > flowboxchild > button {
+  background: rgba(69, 71, 90, 0.6);
+  border-radius: 10px;
+  padding: 10px;
+  color: #a6adc8;
   font-size: 14px;
   transition: all 0.2s ease;
 }
 
-.widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background: rgba(137, 180, 250, 0.3);
-}
-
-.widget-buttons-grid > flowbox > flowboxchild > button:active {
-  background: rgba(137, 180, 250, 0.5);
-}
-
-.widget-buttons-grid > flowbox > flowboxchild > button.toggle.active {
-  background: #f38ba8;
-  color: #1e1e2e;
+.widget-buttons-grid#audio > flowbox > flowboxchild > button:hover {
+  background: rgba(137, 180, 250, 0.2);
+  color: #cdd6f4;
 }
