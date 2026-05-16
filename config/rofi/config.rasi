@@ -1,0 +1,73 @@
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: "  Search:";
+    drun-display-format: "{icon} {name}";
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+window {
+    width: 35%;
+    border-radius: 12px;
+    border: 2px;
+    border-color: #33ccff; /* Warna cyan nyambung ke Hyprland */
+    background-color: #1e1e2ecc; /* Dark background dengan sedikit transparansi */
+    padding: 15px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview];
+}
+
+inputbar {
+    background-color: #313244;
+    border-radius: 8px;
+    padding: 10px;
+    text-color: #cdd6f4;
+}
+
+prompt {
+    background-color: transparent;
+    text-color: #cdd6f4;
+    margin: 0 10px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color: #cdd6f4;
+    placeholder: "Ketik nama aplikasi...";
+    placeholder-color: #6c7086;
+}
+
+listview {
+    background-color: transparent;
+    margin: 15px 0 0 0;
+    lines: 7;
+    columns: 1;
+    border: 0px;
+}
+
+element {
+    padding: 10px;
+    background-color: transparent;
+    text-color: #cdd6f4;
+    border-radius: 8px;
+}
+
+element-icon {
+    size: 24px;
+    margin: 0 10px 0 0;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element selected {
+    background-color: #33ccff;
+    text-color: #1e1e2e;
+}

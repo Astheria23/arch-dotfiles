@@ -1,0 +1,38 @@
+# Git submodules & nested repos
+config/nvim/.git/
+config/tmux/plugins/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Backup files
+*.bak
+*~
+.swp
+.swo
+
+# Sensitive data
+*.key
+*.pem
+*.crt
+*.env
+
+# Waypaper wallpaper cache
+config/waypaper/__pycache__/
+
+# Btop log
+btop.log
+
+# Cava temp files
+
+# Nvim undo files
+config/nvim/undo/
+
+# Local state files
+config/hypr/*.pid

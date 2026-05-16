@@ -1,0 +1,55 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", "Ubuntu Nerd Font", sans-serif;
+  font-weight: bold;
+}
+
+.control-center .background {
+  background: rgba(30, 30, 46, 0.7); /* Transparan gelap */
+  border-radius: 12px;
+}
+
+.control-center .notification-row .notification-background {
+  background: rgba(49, 50, 68, 0.8);
+  margin-top: 10px;
+  border-radius: 12px;
+}
+
+.control-center .notification-row .notification-background .notification {
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.widget-title {
+  color: #cdd6f4;
+  margin: 10px;
+  font-size: 1.2rem;
+}
+
+.widget-dnd {
+  margin: 10px;
+}
+
+.widget-dnd > switch {
+  background: #45475a;
+}
+
+.widget-dnd > switch:checked {
+  background: #89b4fa;
+}
+
+.widget-volume,
+.widget-backlight {
+  background: rgba(49, 50, 68, 0.8);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  color: #cdd6f4;
+}
+
+.widget-mpris {
+  background: rgba(49, 50, 68, 0.8);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 12px;
+  color: #cdd6f4;
+}
