@@ -8,21 +8,5 @@ if [[ "$HDMI_STATUS" == "0" && "$MODE" != "laptop" ]]; then
     exit 1
 fi
 
-case $MODE in
-    "laptop")
-        hyprctl keyword monitor "eDP-1, preferred, auto, 1"
-        hyprctl keyword monitor "HDMI-A-1, disable"
-        ;;
-    "external")
-        hyprctl keyword monitor "eDP-1, disable"
-        hyprctl keyword monitor "HDMI-A-1, highrr, auto, 1"
-        ;;
-    "extend")
-        hyprctl keyword monitor "eDP-1, preferred, auto, 1"
-        hyprctl keyword monitor "HDMI-A-1, highrr, auto, 1"
-        ;;
-    "mirror")
-        hyprctl keyword monitor "eDP-1, preferred, auto, 1"
-        hyprctl keyword monitor "HDMI-A-1, preferred, auto, 1, mirror, eDP-1"
-        ;;
-esac
+~/.config/hypr/generate_monitors.sh "$MODE"
+hyprctl reload

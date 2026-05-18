@@ -22,7 +22,8 @@
     "volume",
     "buttons-grid#audio",
     "backlight",
-    "notifications"
+    "notifications",
+    "buttons-grid#power"
   ],
   "widget-config": {
     "title": {
@@ -89,6 +90,23 @@
       "label": "󰖙",
       "device": "amdgpu_bl1"
     },
-    "notifications": {}
+    "notifications": {},
+    "buttons-grid#power": {
+      "buttons-per-row": 3,
+      "actions": [
+        {
+          "label": "󰜉\nReboot",
+          "command": "zenity --question --title='Reboot' --text='Are you sure you want to reboot?' --ok-label='Reboot' --cancel-label='Cancel' && systemctl reboot"
+        },
+        {
+          "label": "󰍃\nLogout",
+          "command": "zenity --question --title='Logout' --text='Are you sure you want to logout?' --ok-label='Logout' --cancel-label='Cancel' && hyprctl dispatch exit"
+        },
+        {
+          "label": "󰐥\nShutdown",
+          "command": "zenity --question --title='Shutdown' --text='Are you sure you want to shutdown?' --ok-label='Shutdown' --cancel-label='Cancel' && systemctl poweroff"
+        }
+      ]
+    }
   }
 }

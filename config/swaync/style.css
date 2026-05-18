@@ -1,8 +1,5 @@
-@import url('/etc/xdg/swaync/style.css');
-
-* {
+.control-center {
   font-family: "JetBrainsMono Nerd Font", "JetBrainsMonoNL Nerd Font", "JetBrainsMono NFM", "Ubuntu Nerd Font", "Noto Sans Mono", sans-serif;
-  font-weight: bold;
 }
 
 .control-center .background {
@@ -46,7 +43,6 @@
 }
 
 .widget-buttons-grid#toggles > flowbox > flowboxchild > button {
-  font-family: "JetBrainsMono Nerd Font", "JetBrainsMonoNL Nerd Font", "JetBrainsMono NFM", "Ubuntu Nerd Font", "Noto Sans Mono", sans-serif;
   font-weight: normal;
   background: rgba(69, 71, 90, 0.6);
   border-radius: 10px;
@@ -56,7 +52,6 @@
   min-width: 60px;
   min-height: 40px;
   transition: all 0.2s ease;
-  -gtk-icon-source: none;
 }
 
 .widget-buttons-grid#toggles > flowbox > flowboxchild > button:hover {
@@ -119,4 +114,48 @@
 .widget-buttons-grid#audio > flowbox > flowboxchild > button:hover {
   background: rgba(137, 180, 250, 0.2);
   color: #cdd6f4;
+}
+
+/* Power Menu Section */
+.widget-buttons-grid#power {
+  background: transparent;
+  padding: 0 10px;
+  margin: 15px 10px 10px 10px;
+}
+
+.widget-buttons-grid#power > flowbox > flowboxchild > button {
+  font-weight: normal;
+  background: rgba(69, 71, 90, 0.6);
+  border-radius: 10px;
+  padding: 8px 4px;
+  font-size: 11px;
+  min-width: 70px;
+  min-height: 55px;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+}
+
+/* Power Button Colors */
+.widget-buttons-grid#power > flowbox > flowboxchild:nth-child(1) > button {
+  color: #89b4fa;
+}
+
+.widget-buttons-grid#power > flowbox > flowboxchild:nth-child(1) > button:hover {
+  background: rgba(137, 180, 250, 0.3);
+}
+
+.widget-buttons-grid#power > flowbox > flowboxchild:nth-child(2) > button {
+  color: #a6e3a1;
+}
+
+.widget-buttons-grid#power > flowbox > flowboxchild:nth-child(2) > button:hover {
+  background: rgba(166, 227, 161, 0.3);
+}
+
+.widget-buttons-grid#power > flowbox > flowboxchild:nth-child(3) > button {
+  color: #f38ba8;
+}
+
+.widget-buttons-grid#power > flowbox > flowboxchild:nth-child(3) > button:hover {
+  background: rgba(243, 139, 168, 0.3);
 }
