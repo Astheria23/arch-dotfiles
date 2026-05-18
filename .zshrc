@@ -13,6 +13,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # ==========================
+# Auto-attach tmux
+# ==========================
+if [ -z "$TMUX" ] && [ -z "$VSCODE_PID" ] && [ -z "$ZED_TERM" ]; then
+  tmux attach -t main 2>/dev/null || tmux new -s main
+fi
+
+# ==========================
 # SSH Agent
 # ==========================
 if [ -z "$SSH_AUTH_SOCK" ]; then
@@ -23,7 +30,7 @@ fi
 # ==========================
 # Terminal Essentials & Aliases
 # ==========================
-export PATH="$HOME/.local/zed.app/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/.local/zed.app/bin:$PATH"
 export EDITOR=nvim
 alias ls='eza --icons=always --color=always'
 alias ll='eza -alF --icons=always --color=always'
