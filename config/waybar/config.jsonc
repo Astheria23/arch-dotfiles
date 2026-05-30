@@ -32,7 +32,7 @@
     },
 
     "clock": {
-        "format": "{:%H:%M}",
+        "format": "{:%H:%M} | ",
         "tooltip-format": "{calendar}",
         "calendar": {
             "mode": "month",
