@@ -12,7 +12,7 @@ window#waybar {
 .modules-left {
     background: rgba(30, 30, 46, 0.60);
     border: 1px solid rgba(137, 180, 250, 0.12);
-    border-radius: 14px;
+    border-radius: 10px;
     padding: 0 12px;
     margin: 0;
 }
@@ -21,7 +21,7 @@ window#waybar {
 .modules-center {
     background: rgba(30, 30, 46, 0.60);
     border: 1px solid rgba(137, 180, 250, 0.12);
-    border-radius: 14px;
+    border-radius: 10px;
     padding: 0 12px;
     margin: 0;
 }
@@ -30,7 +30,7 @@ window#waybar {
 .modules-right {
     background: rgba(30, 30, 46, 0.60);
     border: 1px solid rgba(137, 180, 250, 0.12);
-    border-radius: 14px;
+    border-radius: 10px;
     padding: 0 12px;
     margin: 0;
 }
@@ -66,10 +66,10 @@ window#waybar {
     color: rgba(205, 214, 244, 0.35);
     font-size: 13px;
     font-weight: 500;
-    padding: 0 10px;
-    min-width: 24px;
+    padding: 0 6px;
+    min-width: 20px;
     min-height: 0;
-    border-radius: 8px;
+    border-radius: 6px;
     transition: all 0.2s ease;
 }
 
@@ -81,7 +81,7 @@ window#waybar {
 #workspaces button.active {
     color: #89b4fa;
     font-weight: 700;
-    background: rgba(137, 180, 250, 0.15);
+    background: rgba(137, 180, 250, 0.12);
 }
 
 #workspaces button.empty {

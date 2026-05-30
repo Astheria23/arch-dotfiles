@@ -8,7 +8,10 @@
 
     "modules-left": ["custom/arch", "clock", "hyprland/window"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["custom/ram-bar", "tray", "temperature", "pulseaudio", "backlight", "battery"],
+    "modules-right": [
+        /* "custom/ram-bar", */
+        "tray", "temperature", "pulseaudio", "backlight", "battery"
+    ],
 
     "custom/ram-bar": {
         "exec": "~/.config/waybar/scripts/ram_bar.sh",
@@ -46,7 +49,19 @@
     },
 
     "hyprland/workspaces": {
-        "format": "{name}",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十"
+        },
         "on-click": "activate"
     },
 
