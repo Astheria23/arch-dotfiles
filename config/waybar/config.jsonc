@@ -9,7 +9,7 @@
 
     "modules-left": ["custom/arch", "hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/ram-bar","bluetooth", "network", "temperature", "pulseaudio", "backlight","battery"],
+    "modules-right": ["custom/ram-bar","tray", "temperature", "pulseaudio", "backlight","battery"],
    
     "custom/ram-bar": {
         "exec": "~/.config/waybar/scripts/ram_bar.sh",
@@ -55,19 +55,6 @@
         "critical-threshold": 80,
         "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", ""]
-    },
-
-    "network": {
-        "format-wifi": "{icon}",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤨"],
-        "format-disconnected": "",
-        "tooltip-format": "{essid} {signalStrength}%",
-        "on-click": "kitty -e nmtui"
-    },
-    "bluetooth": {
-        "format": "{icon}",
-        "format-icons": ["", "", ""],
-        "on-click": "blueman-manager"
     },
 
     "battery": {
