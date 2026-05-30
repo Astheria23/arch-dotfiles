@@ -15,6 +15,7 @@ window#waybar {
     border-radius: 10px;
     padding: 0 12px;
     margin: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===== Center Group (Workspaces) ===== */
@@ -24,6 +25,7 @@ window#waybar {
     border-radius: 10px;
     padding: 0 12px;
     margin: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===== Right Group (System modules) ===== */
@@ -33,13 +35,14 @@ window#waybar {
     border-radius: 10px;
     padding: 0 12px;
     margin: 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ===== Arch Logo ===== */
 #custom-arch {
     color: #1793d1;
     font-size: 20px;
-    padding: 0 8px 0 0;
+    padding: 0 4px 0 0;
     min-width: 30px;
 }
 
@@ -47,7 +50,7 @@ window#waybar {
 #clock {
     color: #cdd6f4;
     font-weight: 600;
-    padding: 0 10px;
+    padding: 0 6px;
 }
 
 /* ===== Window Title ===== */
@@ -100,6 +103,16 @@ window#waybar {
 #tray {
     padding: 0 10px;
     color: #a6adc8;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#temperature:hover,
+#battery:hover,
+#pulseaudio:hover,
+#backlight:hover,
+#custom-ram-bar:hover,
+#tray:hover {
+    color: #cdd6f4;
 }
 
 #tray menu {
