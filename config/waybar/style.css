@@ -66,22 +66,25 @@ window#waybar {
     color: rgba(205, 214, 244, 0.35);
     font-size: 13px;
     font-weight: 500;
-    padding: 0 6px;
-    min-width: 20px;
+    padding: 0 5px;
+    min-width: 18px;
     min-height: 0;
-    border-radius: 6px;
+    border-radius: 0;
+    background: transparent;
     transition: all 0.2s ease;
 }
 
 #workspaces button:hover {
     color: rgba(205, 214, 244, 0.8);
-    background: rgba(137, 180, 250, 0.10);
+    background: rgba(137, 180, 250, 0.08);
 }
 
 #workspaces button.active {
     color: #89b4fa;
     font-weight: 700;
-    background: rgba(137, 180, 250, 0.12);
+    background: transparent;
+    border-bottom: 2px solid #89b4fa;
+    padding-bottom: 2px;
 }
 
 #workspaces button.empty {
