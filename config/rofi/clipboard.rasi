@@ -1,0 +1,120 @@
+/*
+ * Rofi Config — Clipboard Manager Theme
+ * Clean list view for clipboard history (no icons, monospace text)
+ */
+
+configuration {
+    modi: "drun";
+    show-icons: false;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+/* ===== Main Window ===== */
+window {
+    width: 35%;
+    border-radius: 12px;
+    border: 1px;
+    border-color: rgba(137, 180, 250, 0.25);
+    background-color: rgba(30, 30, 46, 0.92);
+    padding: 16px;
+    spacing: 0;
+}
+
+/* ===== Container ===== */
+mainbox {
+    background-color: transparent;
+    children: [inputbar, listview];
+    spacing: 12px;
+}
+
+/* ===== Search Bar ===== */
+inputbar {
+    background-color: rgba(49, 50, 68, 0.8);
+    border-radius: 10px;
+    padding: 10px 14px;
+    text-color: #cdd6f4;
+    border: 1px;
+    border-color: rgba(137, 180, 250, 0.15);
+}
+
+prompt {
+    background-color: transparent;
+    text-color: #89b4fa;
+    margin: 0 10px 0 0;
+}
+
+entry {
+    background-color: transparent;
+    text-color: #cdd6f4;
+    placeholder: "Search clipboard...";
+    placeholder-color: #6c7086;
+    cursor: text;
+    blink: true;
+}
+
+/* ===== List View ===== */
+listview {
+    background-color: transparent;
+    margin: 0;
+    lines: 10;
+    columns: 1;
+    spacing: 4px;
+    fixed-columns: true;
+    dynamic: true;
+    border: 0px;
+}
+
+/* ===== Clipboard Item ===== */
+element {
+    padding: 8px 12px;
+    background-color: transparent;
+    text-color: #cdd6f4;
+    border-radius: 8px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    font-size: 12px;
+    vertical-align: 0.5;
+}
+
+/* ===== Hover / All States ===== */
+element normal.normal,
+element normal.active,
+element normal.urgent,
+element alternate.normal,
+element alternate.active,
+element alternate.urgent {
+    background-color: transparent;
+    text-color: #cdd6f4;
+    border-radius: 8px;
+}
+
+/* ===== Selected Item ===== */
+element selected {
+    background-color: rgba(137, 180, 250, 0.15);
+    text-color: #89b4fa;
+    border: 1px;
+    border-color: rgba(137, 180, 250, 0.4);
+    border-radius: 8px;
+}
+
+/* ===== Scrollbar ===== */
+scrollbar {
+    background-color: rgba(69, 71, 90, 0.4);
+    border-radius: 4px;
+    margin: 0 0 0 6px;
+    width: 4px;
+    handle-color: rgba(137, 180, 250, 0.6);
+    handle-width: 4px;
+    padding: 0;
+}
+
+/* ===== Message ===== */
+message {
+    background-color: transparent;
+    text-color: #6c7086;
+    padding: 16px;
+    border-radius: 8px;
+}

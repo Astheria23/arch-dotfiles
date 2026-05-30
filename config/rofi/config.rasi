@@ -1,73 +1,150 @@
+/*
+ * Rofi Config — Catppuccin Mocha Grid Theme
+ * Modern, glassmorphic app launcher
+ */
+
 configuration {
     modi: "drun";
     show-icons: true;
     display-drun: "  Search:";
     drun-display-format: "{icon} {name}";
-    font: "JetBrainsMono Nerd Font 11";
+    font: "JetBrainsMono Nerd Font 13";
+    icon-theme: "Papirus-Dark";
 }
 
+/* ===== Main Window ===== */
 window {
-    width: 35%;
-    border-radius: 12px;
-    border: 2px;
-    border-color: #33ccff; /* Warna cyan nyambung ke Hyprland */
-    background-color: #1e1e2ecc; /* Dark background dengan sedikit transparansi */
-    padding: 15px;
+    width: 45%;
+    border-radius: 16px;
+    border: 1px;
+    border-color: rgba(137, 180, 250, 0.25);
+    background-color: rgba(30, 30, 46, 0.92);
+    padding: 24px;
+    spacing: 0;
 }
 
+/* ===== Container ===== */
 mainbox {
     background-color: transparent;
     children: [inputbar, listview];
+    spacing: 20px;
 }
 
+/* ===== Search Bar ===== */
 inputbar {
-    background-color: #313244;
-    border-radius: 8px;
-    padding: 10px;
+    background-color: rgba(49, 50, 68, 0.8);
+    border-radius: 12px;
+    padding: 14px 18px;
     text-color: #cdd6f4;
+    border: 1px;
+    border-color: rgba(137, 180, 250, 0.15);
 }
 
 prompt {
     background-color: transparent;
-    text-color: #cdd6f4;
-    margin: 0 10px 0 0;
+    text-color: #89b4fa;
+    margin: 0 12px 0 0;
+    font-size: 14px;
 }
 
 entry {
     background-color: transparent;
     text-color: #cdd6f4;
-    placeholder: "Ketik nama aplikasi...";
+    placeholder: "Type to search apps...";
     placeholder-color: #6c7086;
+    cursor: text;
+    blink: true;
 }
 
+/* ===== Grid View ===== */
 listview {
     background-color: transparent;
-    margin: 15px 0 0 0;
-    lines: 7;
-    columns: 1;
+    margin: 0;
+    lines: 3;
+    columns: 4;
+    spacing: 12px;
+    fixed-columns: true;
+    dynamic: true;
     border: 0px;
 }
 
+/* ===== App Item ===== */
 element {
-    padding: 10px;
-    background-color: transparent;
+    padding: 16px 12px;
+    background-color: rgba(49, 50, 68, 0.4);
     text-color: #cdd6f4;
-    border-radius: 8px;
+    border-radius: 12px;
+    orientation: vertical;
+    spacing: 8px;
 }
 
 element-icon {
-    size: 24px;
-    margin: 0 10px 0 0;
+    size: 48px;
+    margin: 0;
     background-color: transparent;
+    horizontal-align: 0.5;
 }
 
 element-text {
     background-color: transparent;
     text-color: inherit;
+    horizontal-align: 0.5;
     vertical-align: 0.5;
+    font-size: 11px;
+    margin: 4px 0 0 0;
 }
 
+/* ===== Hover / All States Override (fix cream bg) ===== */
+element normal.normal,
+element normal.active,
+element normal.urgent,
+element alternate.normal,
+element alternate.active,
+element alternate.urgent {
+    background-color: rgba(49, 50, 68, 0.4);
+    text-color: #cdd6f4;
+    border-radius: 12px;
+}
+
+/* ===== Selected Item (Glow Effect) ===== */
 element selected {
-    background-color: #33ccff;
-    text-color: #1e1e2e;
+    background-color: rgba(137, 180, 250, 0.15);
+    text-color: #89b4fa;
+    border: 1px;
+    border-color: rgba(137, 180, 250, 0.4);
+    border-radius: 12px;
+}
+
+element selected.active {
+    background-color: rgba(137, 180, 250, 0.25);
+    text-color: #b4befe;
+    border-color: rgba(180, 190, 254, 0.6);
+}
+
+/* ===== Scrollbar ===== */
+scrollbar {
+    background-color: rgba(69, 71, 90, 0.4);
+    border-radius: 6px;
+    margin: 0 0 0 8px;
+    width: 6px;
+    handle-color: rgba(137, 180, 250, 0.6);
+    handle-width: 6px;
+    padding: 0;
+}
+
+/* ===== Message (no results) ===== */
+message {
+    background-color: transparent;
+    text-color: #6c7086;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+error-message {
+    background-color: rgba(243, 139, 168, 0.1);
+    text-color: #f38ba8;
+    border: 1px;
+    border-color: rgba(243, 139, 168, 0.3);
+    border-radius: 12px;
+    padding: 16px;
 }
