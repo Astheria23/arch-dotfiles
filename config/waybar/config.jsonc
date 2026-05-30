@@ -1,16 +1,15 @@
 {
-
     "layer": "top",
     "position": "top",
     "margin-left": 12,
     "margin-right": 12,
-    "margin-top": 7,    
+    "margin-top": 7,
     "spacing": 4,
 
-    "modules-left": ["custom/arch", "hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["custom/ram-bar","tray", "temperature", "pulseaudio", "backlight","battery"],
-   
+    "modules-left": ["custom/arch", "clock", "hyprland/window"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["custom/ram-bar", "tray", "temperature", "pulseaudio", "backlight", "battery"],
+
     "custom/ram-bar": {
         "exec": "~/.config/waybar/scripts/ram_bar.sh",
         "interval": 5,
@@ -19,8 +18,8 @@
     },
 
     "tray": {
-    "icon-size": 16,
-    "spacing": 10
+        "icon-size": 16,
+        "spacing": 10
     },
 
     "custom/arch": {
@@ -29,26 +28,26 @@
         "tooltip": false
     },
 
-    "hyprland/workspaces": {
-        "format": "●",
-        "on-click": "activate"
-    },
-
     "clock": {
-        "format": "  {:%H:%M}",
+        "format": "{:%H:%M}",
         "tooltip-format": "{calendar}",
         "calendar": {
-            "mode"          : "month",
-            "on-scroll"     : 1,
+            "mode": "month",
+            "on-scroll": 1,
             "format": {
-                "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
             }
         }
     },
 
-    "memory": {
-        "format": "  {used:0.1f}G",
-        "interval": 5
+    "hyprland/window": {
+        "max-length": 50,
+        "separate-outputs": true
+    },
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
     },
 
     "temperature": {

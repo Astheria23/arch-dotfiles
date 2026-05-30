@@ -8,54 +8,87 @@ window#waybar {
     color: #f8f8f2;
 }
 
-/* Tengah & Kanan — grup capsule */
-.modules-center,
+/* ===== Left Group (Arch + Clock + Window) ===== */
+.modules-left {
+    background: rgba(30, 30, 46, 0.60);
+    border: 1px solid rgba(137, 180, 250, 0.12);
+    border-radius: 14px;
+    padding: 0 12px;
+    margin: 0;
+}
+
+/* ===== Center Group (Workspaces) ===== */
+.modules-center {
+    background: rgba(30, 30, 46, 0.60);
+    border: 1px solid rgba(137, 180, 250, 0.12);
+    border-radius: 14px;
+    padding: 0 12px;
+    margin: 0;
+}
+
+/* ===== Right Group (System modules) ===== */
 .modules-right {
-    background: rgba(30, 30, 46, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    padding: 0 8px;
-    margin: 0 0;
+    background: rgba(30, 30, 46, 0.60);
+    border: 1px solid rgba(137, 180, 250, 0.12);
+    border-radius: 14px;
+    padding: 0 12px;
+    margin: 0;
 }
 
-/* Kiri — masing-masing capsule sendiri */
-#custom-arch,
-#workspaces {
-    background: rgba(30, 30, 46, 0.85);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    margin: 0 0;
-}
-
+/* ===== Arch Logo ===== */
 #custom-arch {
     color: #1793d1;
     font-size: 20px;
-    padding: 0 5px 0 0;
+    padding: 0 8px 0 0;
     min-width: 30px;
 }
 
+/* ===== Clock (Time only, no icon) ===== */
+#clock {
+    color: #cdd6f4;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+/* ===== Window Title ===== */
+#hyprland-window {
+    color: #a6adc8;
+    font-weight: 400;
+    padding: 0 10px;
+}
+
+/* ===== Workspaces (Numbers in center) ===== */
 #workspaces {
     padding: 0 4px;
 }
 
 #workspaces button {
-    color: rgba(255, 255, 255, 0.2);
-    font-size: 14px;
-    padding: 0 4px;
-    min-width: 0;
+    color: rgba(205, 214, 244, 0.35);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 10px;
+    min-width: 24px;
     min-height: 0;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button:hover {
+    color: rgba(205, 214, 244, 0.8);
+    background: rgba(137, 180, 250, 0.10);
 }
 
 #workspaces button.active {
-    color: #1793d1;
-    font-size: 16px;
+    color: #89b4fa;
+    font-weight: 700;
+    background: rgba(137, 180, 250, 0.15);
 }
 
-#clock {
-    color: #f8f8f2;
-    font-weight: bold;
+#workspaces button.empty {
+    color: rgba(205, 214, 244, 0.15);
 }
 
+/* ===== System Modules ===== */
 #temperature,
 #battery,
 #pulseaudio,
@@ -63,13 +96,13 @@ window#waybar {
 #custom-ram-bar,
 #tray {
     padding: 0 10px;
-    color: #c0c0c0;
+    color: #a6adc8;
 }
 
 #tray menu {
     background: #1e1e2e;
     color: #cdd6f4;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(137, 180, 250, 0.15);
     border-radius: 10px;
 }
 
@@ -78,13 +111,23 @@ window#waybar {
 }
 
 #battery.charging {
-    color: #1793d1;
+    color: #a6e3a1;
 }
 
+#battery.warning {
+    color: #f9e2af;
+}
+
+#battery.critical {
+    color: #f38ba8;
+}
+
+/* ===== Tooltip ===== */
 tooltip {
-    background: #1e1e2e;
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(30, 30, 46, 0.95);
+    border-radius: 12px;
+    border: 1px solid rgba(137, 180, 250, 0.20);
+    padding: 8px;
 }
 
 tooltip label {
